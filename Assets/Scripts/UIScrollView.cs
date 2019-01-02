@@ -20,7 +20,7 @@ public class UIScrollView : MonoBehaviour
     private ScrollRect scrollRect;
     private RectTransform itemParent;
     private GameObject itemObj;          //克隆体
-    private Vector2 m_maskSize;     //遮罩大小
+    //private Vector2 m_maskSize;     //遮罩大小
     //根据参数来计算
     private int m_createCount;            //创建的数量
     private int m_rectWidth;           //列表宽度
@@ -93,7 +93,7 @@ public class UIScrollView : MonoBehaviour
         itemRec.anchorMin = new Vector2(0, 1);
         itemRec.anchorMax = new Vector2(0, 1);
         itemRec.pivot = new Vector2(0, 1);
-        m_maskSize = GetComponent<RectTransform>().sizeDelta;
+        //m_maskSize = GetComponent<RectTransform>().sizeDelta;
     }
     ////设置元素之间的间距 spacing ：SetOffset()
     public void SetOffset(int x, int y)
@@ -263,7 +263,7 @@ public class UIScrollView : MonoBehaviour
         curItemParentPos = itemParent.localPosition;
         if (m_listCount <= m_createCount)
             return;
-        m_startIndex = GetStartIndex(itemParent.localPosition.x);
+        m_startIndex = GetStartIndex(curItemParentPos.x);
         if (m_startIndex + m_createCount >= m_listCount)
         {
             m_startIndex = m_listCount - m_createCount;

@@ -19,7 +19,7 @@ public class DataDBContorller: MonoBehaviour
 	//远程连接
 	//  string connectionString= "User ID = ; Password =.; Host =; Port =3306;Database = ;Charset = ";
 	//本地连接
-	public static     string connectionString= "User ID =root ; Password =888888 ; Host =localhost ; Port = 3306;Database =ccbhouse2 ;Charset =utf8";
+	public static     string connectionString= "User ID =root ; Password =888888 ; Host =localhost ; Port = 3306;Database =ccb ;Charset =utf8";
 
 	public static MySqlConnection dbConnection;
 
