@@ -1,18 +1,32 @@
 ﻿using UnityEngine;
 using System.Collections;
 using UnityEngine.UI;
+using UnityEngine.EventSystems;
 public class UILoopItem : MonoBehaviour
 {
-
     [System.NonSerialized]
     public int itemIndex;
     [System.NonSerialized]
     public GameObject itemObject;
     private IList data;
+    public int ItemID
+    {
+        get
+        {
+            if (data == null)
+            {
+                return 0;
+            }
+            else
+            {
+                return int.Parse(this.data[0].ToString());
+            }
+        }
+    }
 
     private void Start()
     {
-        StartCoroutine(LoadTextureToMainTexture());
+        StartCoroutine(LoadTextureToMainTexture());     
     }
 
     public void UpdateItem(int index, GameObject item)
@@ -36,10 +50,17 @@ public class UILoopItem : MonoBehaviour
 
     IEnumerator LoadTextureToMainTexture()
     {
-        WWW www = new WWW("http://ccb-prod-oss.inboyu.com/upload/39eb11d5-5c0e-4cba-7e9c-d56ab48a78ee.jpg"
-            // RecStr[3]
-            );
+        string str = this.data[3].ToString();
+        WWW www = new WWW(str);
         yield return www;
         transform.GetComponent<RawImage>().texture = www.texture;
     }
+
+    public void OnSelectedEventHandler()
+    {
+        GameManager.Instance.LoadingCanvas.SetActive(true);
+        GameManager.Instance.ShowCanvas.SetActive(true);
+        LoadDataIn2ed.Instance.DisposeSecondaryInterfaceInfo(this.ItemID);
+    }
+
 }

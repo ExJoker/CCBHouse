@@ -309,13 +309,12 @@ public class UILoopList : MonoBehaviour
             {
                 lit.SetSelected(false);
             }
-            if (lit.GetComponent<Button>() != null && onSelectedEvent != null && addClickEventList.IndexOf(lit.GetComponent<Button>()) < 0)
+            if (lit.GetComponent<Button>() != null  && addClickEventList.IndexOf(lit.GetComponent<Button>()) < 0)
             {
                 addClickEventList.Add(lit.GetComponent<Button>());
-                lit.GetComponent<Button>().onClick.AddListener(delegate ()
-                {
-                    if (onSelectedEvent != null)
-                    {
+                lit.GetComponent<Button>().onClick.AddListener(
+                    delegate (){
+                
                         if (selectedItem != null && selectedItem != item.GetComponent<UILoopItem>())
                         {
                             selectedItem.SetSelected(false);
@@ -323,22 +322,17 @@ public class UILoopList : MonoBehaviour
                         selectedItem = item.GetComponent<UILoopItem>();
                         selectedObject = selectedItem.GetData();
                         selectedItem.SetSelected(true);
-                        onSelectedEvent(selectedItem);
+                        selectedItem.OnSelectedEventHandler();
                     }
-                });
+                );
             }
         }
     }
     private List<Button> addClickEventList = new List<Button>();
-    //void Start()
-    //{
-    //    List<int> a = new List<int>();
-    //    for (int i = 0; i < 30; i++)
-    //    {
-    //        a.Add(i);
-    //    }
-    //    Data(a);
-    //}
+    void Start()
+    {
+        
+    }
     /// <summary>
     /// 选中的对象
     /// </summary>

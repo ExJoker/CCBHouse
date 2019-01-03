@@ -42,7 +42,7 @@ public class TestSQL : MonoBehaviour {
 
     public void Select()
     {
-        RecStr = DataDBContorller.Select("SELECT * FROM `brand`;")[0] as string[];
+        RecStr = DataDBContorller.Select("SELECT * FROM `test`;")[0] as string[];
         //for (int i = 0; i < RecStr.Length; i++)
         //{
         //    RecStr[i].Trim();
