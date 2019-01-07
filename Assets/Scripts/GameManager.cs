@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine.EventSystems;
+using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
@@ -16,6 +17,19 @@ public class GameManager : MonoBehaviour
     public GameObject ShowCanvasContent;
     public GameObject ShowCanvas;
     public GameObject ShowPic;
+    public GameObject Logo;
+    [SerializeField, Header("Secondary Datas")]
+    public Text BrandName;
+    public Text Rent;
+    public Text RoomArea;
+    public Text Address;
+    public Text SetCnt;
+    public Text SetRemaind;
+    public Text Requirement;
+    public Text ApartmentType;
+    public Text Appointment;
+    public Text Contact;
+    public Text Guarantee;
 
     [SerializeField, Header("Transition interface")]
     public GameObject LoadingCanvas;

@@ -50,8 +50,9 @@ public class UILoopItem : MonoBehaviour
 
     IEnumerator LoadTextureToMainTexture()
     {
-        string str = this.data[3].ToString();
-        WWW www = new WWW(str);
+        string str = this.data[4].ToString();
+      //  Debug.Log("Str : " + str);
+        WWW www = new WWW(str + "?x-oss-process=image/resize,m_fixed,w_300");
         yield return www;
         transform.GetComponent<RawImage>().texture = www.texture;
     }
