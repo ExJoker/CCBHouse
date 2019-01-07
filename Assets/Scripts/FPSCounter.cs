@@ -10,7 +10,6 @@ public class FPSCounter : MonoBehaviour
     private int m_CurrentFps;
     const string display = "{0} FPS";
 
-
     private void Start()
     {
         m_FpsNextPeriod = Time.realtimeSinceStartup + fpsMeasurePeriod;

@@ -145,7 +145,7 @@ public class DataDBContorller: MonoBehaviour
 		}
 
 	}
-	static void resultToString(List<string[]> list)
+	static void ResultToString(List<string[]> list)
 	{
 		foreach(string[] s in list)
 		{

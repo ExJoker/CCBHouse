@@ -13,7 +13,7 @@ public class CellBtnResponse : MonoBehaviour {
     {
         cellClickEvent = transform.GetComponent<Button>();
         cellClickEvent.onClick.RemoveAllListeners();
-        cellClickEvent.onClick.AddListener(delegate () {
+        cellClickEvent.onClick.AddListener(delegate (){
             SmallPicConvertToGreatPic();
         });
         if (transform.GetSiblingIndex() == 0)

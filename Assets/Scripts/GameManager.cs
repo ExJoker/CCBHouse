@@ -71,7 +71,7 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    private void ReturnMainCanvas()
+    public void ReturnMainCanvas()
     {
         mainCanvas.SetActive(true);
         ShowCanvas.SetActive(false);
