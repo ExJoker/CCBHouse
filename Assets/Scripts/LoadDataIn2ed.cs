@@ -99,7 +99,6 @@ public class LoadDataIn2ed : MonoBehaviour {
         GameManager.Instance.SetCnt.text = result[0][16];
         GameManager.Instance.SetRemaind.text = result[0][17];
         GameManager.Instance.Requirement.text = result[0][18].Split('：')[1];
-       // string[] strs = result[0][18].Split(':');
         GameManager.Instance.ApartmentType.text = result[0][12];
         GameManager.Instance.Appointment.text = result[0][19].Split('：')[1];
         GameManager.Instance.Contact.text = result[0][25].Split('：')[1];

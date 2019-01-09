@@ -87,7 +87,7 @@ ff05dcdf90651c3d98a9cad3df5e471e UnityEngine.Timeline.dll:UnityEngine.Timeline.C
 6af7378a45ad6da4992a71ef50ddc2eb UnityEngine.Timeline.dll:UnityEngine.Timeline.GroupTrack
 6af7378a45ad6da4992a71ef50ddc2eb UnityEngine.Timeline.dll:UnityEngine.Timeline.PlayableTrack
 af723155c251fcfa0e66530a75f3ea4c UnityEngine.Timeline.dll:UnityEngine.Timeline.TimelineAsset
-9424f2704280ceb049ebb1d2cbc46e17 Assembly-CSharp.dll:.GameManager
+6924b1f0f8056f8e578609f353d8c44a Assembly-CSharp.dll:.GameManager
 4dccabe3d021bdf6ddc87a572a82ecdd Assembly-CSharp.dll:Coffee.UIExtensions.UIEffect
 fc1e0f4d8439d9928083474691511a13 UnityEngine.Networking.dll:UnityEngine.Networking.NetworkAnimator
 05524b8f659e7bfe5756d1335fec24ba UnityEngine.Networking.dll:UnityEngine.Networking.NetworkBehaviour
@@ -150,3 +150,4 @@ fabcfe9e357813f9a21556a68a721103 Assembly-CSharp.dll:DG.Tweening.DOTweenAnimatio
 5d13a02f004adbf069d927b79477e134 Assembly-CSharp.dll:.UILoopList
 1ecdbefdb36116f99a34268622f193a2 Assembly-CSharp.dll:.UIScrollView
 2197c00be7947d8df8f796955368933b Assembly-CSharp.dll:.TestSQL
+05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.LoadAeraScr

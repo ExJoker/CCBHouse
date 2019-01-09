@@ -10,8 +10,9 @@ public class GameManager : MonoBehaviour
 
 
     [SerializeField,Header("Primary Interface Elements") ]
-    public UILoopList MainCanvasContent;
+    public UILoopList MainCanvasContentInHousingResource;
     public GameObject mainCanvas;
+    public GameObject MainCanvasContentInAreaList;
 
     [SerializeField, Header("Secondary Interface Elements")]
     public GameObject ShowCanvasContent;
@@ -37,6 +38,7 @@ public class GameManager : MonoBehaviour
     [SerializeField, Header("Reuse Elements")]
     public GameObject itemPrefabs; //Primary Interface Reuse Element
     public GameObject cellPrefabs; //Secondary Interface Reuse Element
+    public GameObject areaBtn;  //AreaButton Reuse Element
 
 
     [SerializeField, Header("FacilityIcons")]
@@ -61,14 +63,14 @@ public class GameManager : MonoBehaviour
     // Use this for initialization
     void Start()
     {
-        string sql = "SELECT * FROM `test`";
+        string sql = "SELECT * FROM `test` where state = 1" ;
         result = DataDBContorller.Select(sql);
         List<string[]> listData = new List<string[]>();
         for (int i = 0; i < result.Count - 50; i++)
         {
             listData.Add(result[i]);
         }
-        MainCanvasContent.Data(listData);
+        MainCanvasContentInHousingResource.Data(listData);
     }
 
     private void OnSelectedEventHandler(UILoopItem item)

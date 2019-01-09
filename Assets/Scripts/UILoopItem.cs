@@ -26,6 +26,7 @@ public class UILoopItem : MonoBehaviour
 
     private void Start()
     {
+        StopAllCoroutines();
         StartCoroutine(LoadTextureToMainTexture());     
     }
 
@@ -37,7 +38,10 @@ public class UILoopItem : MonoBehaviour
     public virtual void Data(object data)
     {
         this.data = data as IList;
-        transform.Find("Text").GetComponent<Text>().text = this.data[1].ToString();
+        transform.Find("name").GetComponent<Text>().text = this.data[1].ToString();
+        transform.Find("SpaceT").GetComponent<Text>().text = this.data[10].ToString().Split('-')[0] + "㎡";
+        transform.Find("PriceT").GetComponent<Text>().text = this.data[7].ToString() + "元/月";
+
     }
     public virtual IList GetData()
     {
@@ -51,10 +55,10 @@ public class UILoopItem : MonoBehaviour
     IEnumerator LoadTextureToMainTexture()
     {
         string str = this.data[4].ToString();
-      //  Debug.Log("Str : " + str);
+       // Debug.Log("Str : " + str);
         WWW www = new WWW(str + "?x-oss-process=image/resize,m_fixed,w_300");
         yield return www;
-        transform.GetComponent<RawImage>().texture = www.texture;
+        transform.Find("Picture").GetComponent<RawImage>().texture = www.texture;
     }
 
     public void OnSelectedEventHandler()

@@ -29,7 +29,7 @@ public class UILoopList : MonoBehaviour
     private Vector2 m_Page = new Vector2(1, 1);//必须设置；几行几列
     [SerializeField]
     Direction direction = Direction.Horizontal;
-    [SerializeField, Range(4, 10)]
+    [SerializeField, Range(1, 10)]
     private int m_BufferNo;
     /// <summary>
     /// 间隔
